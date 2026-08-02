@@ -1,5 +1,17 @@
 ## Sami Djouhri
 
+![Linux](https://img.shields.io/badge/Linux-333333?logo=linux&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Proxmox](https://img.shields.io/badge/Proxmox-E57000?logo=proxmox&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?logo=grafana&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?logo=gnubash&logoColor=white)
+![nginx](https://img.shields.io/badge/nginx-009639?logo=nginx&logoColor=white)
+![WireGuard](https://img.shields.io/badge/WireGuard-88171A?logo=wireguard&logoColor=white)
+![systemd](https://img.shields.io/badge/systemd-30D475?logo=systemd&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+
 Angehender **IT-Administrator**. Ich lerne den Beruf nicht nur, ich betreibe ihn.
 Mein selbst gebautes Homelab läuft rund um die Uhr und trägt real meine
 Smart-Home-, Web- und Datendienste. Gebaut, gehärtet und am Laufen gehalten von

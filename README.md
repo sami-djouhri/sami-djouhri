@@ -12,52 +12,58 @@
 ![systemd](https://img.shields.io/badge/systemd-30D475?logo=systemd&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
 
-Angehender **IT-Administrator**. Ich lerne den Beruf nicht nur, ich betreibe ihn.
-Mein selbst gebautes Homelab läuft rund um die Uhr und trägt real meine
-Smart-Home-, Web- und Datendienste. Gebaut, gehärtet und am Laufen gehalten von
-mir. Aus jedem Ausfall wird das nächste Runbook.
+Angehender **IT-Administrator**. Das meiste, was ich über den Beruf weiß, kommt
+daher, dass ich ihn zuhause betreibe. Mein Homelab läuft rund um die Uhr und
+trägt echte Dienste: die Smart-Home-Steuerung, meine Webseiten, meine Daten.
+Gebaut und am Laufen gehalten habe ich das selbst. Wenn etwas ausfällt, schreibe
+ich hinterher auf, wie es zu beheben war.
 
 Portfolio, Lebenslauf und Kontakt: **[djouhri.de](https://djouhri.de)**
 
 ### Was ich betreibe
-Ein Multi-Host-Verbund aus Einplatinenrechnern und einem
-x86-Virtualisierungscluster, dauerhaft in Betrieb und nicht nur zum Ausprobieren:
 
-- **Linux und Docker:** über 160 containerisierte Dienste auf einem gemeinsamen,
-  gehärteten Fundament (non-root, read-only Root-Dateisystem, minimale
-  Angriffsfläche).
-- **Virtualisierung:** ein Proxmox-Cluster aus drei Knoten trägt die schweren
-  Lasten, die auf die kleinen Rechner nicht mehr passen, dazu ein
-  Windows-Server- und Active-Directory-Lab in eigenen VMs.
-- **Ressourcen-Planung:** ein knapper Knoten plant sich selbst, statt
-  überbucht zu werden. Ein eigener Regler entscheidet nach echter Auslastung,
-  welche schwere Rolle laufen darf, und schaltet Leerlauf wieder ab.
-- **Netzwerk und Sicherheit:** segmentierte Netzzonen, kein offener Port nach
-  außen, Zugang nur über Reverse-Proxy und VPN, zentrales TLS-Ablauf-Monitoring.
-- **Observability:** Prometheus und Grafana, Health-Checks, Timer-Überwachung,
-  automatisches CVE-Scanning der laufenden Images.
-- **Betrieb und Ausfallsicherheit:** verschlüsselte Off-Site-Backups mit
-  täglicher Vollständigkeits-Prüfung und regelmäßigem Restore-Test,
-  dokumentierte Runbooks, externer Watchdog außerhalb des Heimnetzes.
+Ein Verbund aus mehreren Einplatinenrechnern und einem x86-Virtualisierungscluster,
+seit 2024 durchgehend in Betrieb.
+
+- **Linux und Docker.** Über 160 containerisierte Dienste auf einem gemeinsamen
+  gehärteten Fundament: non-root, read-only Root-Dateisystem, kleine
+  Angriffsfläche.
+- **Virtualisierung.** Drei Proxmox-Knoten tragen die schweren Lasten, für die
+  die kleinen Rechner zu klein geworden sind. Dazu ein Windows-Server- und
+  Active-Directory-Lab in eigenen VMs.
+- **Netzwerk und Sicherheit.** Getrennte Netzzonen, kein offener Port nach außen,
+  Zugang über Reverse-Proxy und VPN. Eine zentrale Überwachung meldet
+  TLS-Zertifikate, bevor sie ablaufen.
+- **Ressourcen-Planung.** Einer der Knoten ist knapp bei Speicher. Ein eigener
+  Regler fragt jede laufende Rolle nach ihrer tatsächlichen Auslastung und
+  entscheidet daraus, wer laufen darf.
+- **Observability.** Prometheus und Grafana, Health-Checks, Timer-Überwachung,
+  CVE-Scans der laufenden Images.
+- **Betrieb.** Verschlüsselte Off-Site-Backups, täglich auf Vollständigkeit
+  geprüft und regelmäßig zurückgespielt. Runbooks für die Fälle, die ich schon
+  einmal hatte. Ein Watchdog außerhalb des Heimnetzes schaut von draußen drauf.
 
 ### Ausgewählte Projekte
-- **[service-template](https://github.com/sami-djouhri/service-template):** mein
-  gehärtetes Python-Microservice-Fundament, aus dem dutzende Dienste entstehen.
+
+- **[service-template](https://github.com/sami-djouhri/service-template):** das
+  gehärtete Python-Fundament, aus dem bei mir dutzende Dienste entstanden sind.
 - **[trivy-scanner](https://github.com/sami-djouhri/trivy-scanner):**
-  RAM-schonendes CVE-Scanning einer Container-Flotte, exportiert als
-  Prometheus-Metrik.
-- **[brain-bus](https://github.com/sami-djouhri/brain-bus):** eine
-  Ops-Automation-Engine, die MQTT-Events zu Meldungen oder bestätigungspflichtigen
-  Aktionen verarbeitet.
-- **[minecraft-arbiter](https://github.com/sami-djouhri/minecraft-arbiter):** ein
-  Ressourcen-Regler, der auf einem knappen Virtualisierungs-Knoten immer nur eine
-  schwere Rolle laufen lässt, gesteuert nach echter Auslastung.
+  CVE-Scanning einer ganzen Container-Flotte auf einem Rechner, der dafür
+  eigentlich zu wenig RAM hat. Ergebnis geht als Prometheus-Metrik raus.
+- **[brain-bus](https://github.com/sami-djouhri/brain-bus):** Ops-Automation, die
+  MQTT-Events zu Meldungen verarbeitet. Alles, was etwas verändern würde, braucht
+  vorher eine Bestätigung.
+- **[minecraft-arbiter](https://github.com/sami-djouhri/minecraft-arbiter):** der
+  Regler von oben, ausgeschrieben.
 - **[sami-portfolio](https://github.com/sami-djouhri/sami-portfolio):** die
-  Codebasis hinter djouhri.de (Next.js, gehärteter Container, self-hosted).
+  Codebasis hinter djouhri.de (Next.js, gehärteter Container, selbst gehostet).
 
 ### Werkzeugkasten
-`Linux` · `Docker` · `Proxmox` · `Bash` · `Python` · `nginx` · `Prometheus` · `Grafana` · `WireGuard` · `systemd` · `restic` · `Git`
+
+Was die Badges nicht zeigen: restic für die Backups, nftables an den Rändern,
+SQLite als Standard-Datenhaltung der kleinen Dienste, Caddy überall dort, wo
+automatisches TLS reicht.
 
 ---
-<sub>Das meiste läuft privat auf eigener Hardware. Hier ein kuratierter,
-secret-freier Ausschnitt, genug um zu zeigen, wie ich baue und betreibe.</sub>
+<sub>Das meiste läuft privat auf eigener Hardware. Was hier liegt, ist ein
+kuratierter, secret-freier Ausschnitt davon.</sub>

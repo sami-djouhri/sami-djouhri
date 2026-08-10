@@ -23,15 +23,22 @@ Portfolio, Lebenslauf und Kontakt: **[djouhri.de](https://djouhri.de)**
 Ein Multi-Host-Verbund aus Einplatinenrechnern und einem
 x86-Virtualisierungscluster, dauerhaft in Betrieb und nicht nur zum Ausprobieren:
 
-- **Linux und Docker:** dutzende containerisierte Dienste auf einem gemeinsamen,
+- **Linux und Docker:** über 160 containerisierte Dienste auf einem gemeinsamen,
   gehärteten Fundament (non-root, read-only Root-Dateisystem, minimale
   Angriffsfläche).
+- **Virtualisierung:** ein Proxmox-Cluster aus drei Knoten trägt die schweren
+  Lasten, die auf die kleinen Rechner nicht mehr passen, dazu ein
+  Windows-Server- und Active-Directory-Lab in eigenen VMs.
+- **Ressourcen-Planung:** ein knapper Knoten plant sich selbst, statt
+  überbucht zu werden. Ein eigener Regler entscheidet nach echter Auslastung,
+  welche schwere Rolle laufen darf, und schaltet Leerlauf wieder ab.
 - **Netzwerk und Sicherheit:** segmentierte Netzzonen, kein offener Port nach
   außen, Zugang nur über Reverse-Proxy und VPN, zentrales TLS-Ablauf-Monitoring.
 - **Observability:** Prometheus und Grafana, Health-Checks, Timer-Überwachung,
   automatisches CVE-Scanning der laufenden Images.
-- **Betrieb und Ausfallsicherheit:** verschlüsselte Off-Site-Backups,
-  dokumentierte Runbooks, ein Cluster mit Lastverteilung und externem Watchdog.
+- **Betrieb und Ausfallsicherheit:** verschlüsselte Off-Site-Backups mit
+  täglicher Vollständigkeits-Prüfung und regelmäßigem Restore-Test,
+  dokumentierte Runbooks, externer Watchdog außerhalb des Heimnetzes.
 
 ### Ausgewählte Projekte
 - **[service-template](https://github.com/sami-djouhri/service-template):** mein
@@ -42,6 +49,9 @@ x86-Virtualisierungscluster, dauerhaft in Betrieb und nicht nur zum Ausprobieren
 - **[brain-bus](https://github.com/sami-djouhri/brain-bus):** eine
   Ops-Automation-Engine, die MQTT-Events zu Meldungen oder bestätigungspflichtigen
   Aktionen verarbeitet.
+- **[minecraft-arbiter](https://github.com/sami-djouhri/minecraft-arbiter):** ein
+  Ressourcen-Regler, der auf einem knappen Virtualisierungs-Knoten immer nur eine
+  schwere Rolle laufen lässt, gesteuert nach echter Auslastung.
 - **[sami-portfolio](https://github.com/sami-djouhri/sami-portfolio):** die
   Codebasis hinter djouhri.de (Next.js, gehärteter Container, self-hosted).
 

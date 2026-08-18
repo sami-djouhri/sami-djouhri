@@ -25,7 +25,7 @@ Portfolio, Lebenslauf und Kontakt: **[djouhri.de](https://djouhri.de)**
 Ein Verbund aus mehreren Einplatinenrechnern und einem x86-Virtualisierungscluster,
 seit 2024 durchgehend in Betrieb.
 
-- **Linux und Docker.** Über 160 containerisierte Dienste auf einem gemeinsamen
+- **Linux und Docker.** Rund 165 containerisierte Dienste auf einem gemeinsamen
   gehärteten Fundament: non-root, read-only Root-Dateisystem, kleine
   Angriffsfläche.
 - **Virtualisierung.** Drei Proxmox-Knoten tragen die schweren Lasten, für die
@@ -36,7 +36,11 @@ seit 2024 durchgehend in Betrieb.
   TLS-Zertifikate, bevor sie ablaufen.
 - **Ressourcen-Planung.** Einer der Knoten ist knapp bei Speicher. Ein eigener
   Regler fragt jede laufende Rolle nach ihrer tatsächlichen Auslastung und
-  entscheidet daraus, wer laufen darf.
+  entscheidet daraus, wer laufen darf. Dasselbe Prinzip tragen inzwischen auch
+  die selten benutzten Web-Dienste: sie starten beim ersten Aufruf und schlafen
+  wieder ein, wenn eine halbe Stunde niemand vorbeikommt.
+- **Offline verfügbar.** Nachschlagewerk, Karte, Adress-Suche und Routenplanung
+  liegen vollständig im Haus und funktionieren ohne Leitung nach draußen.
 - **Observability.** Prometheus und Grafana, Health-Checks, Timer-Überwachung,
   CVE-Scans der laufenden Images.
 - **Betrieb.** Verschlüsselte Off-Site-Backups, täglich auf Vollständigkeit
@@ -55,6 +59,12 @@ seit 2024 durchgehend in Betrieb.
   vorher eine Bestätigung.
 - **[minecraft-arbiter](https://github.com/sami-djouhri/minecraft-arbiter):** der
   Regler von oben, ausgeschrieben.
+- **[wake-gateway](https://github.com/sami-djouhri/wake-gateway):** Dienste, die
+  beim ersten Aufruf starten und danach wieder einschlafen. Mit der Falle, die
+  das kostet: eine Verfügbarkeits-Prüfung, die den Dienst aufruft, hält ihn wach.
+- **[karten](https://github.com/sami-djouhri/karten):** Offline-Kartenportal mit
+  Adress-Suche über rund 20 Millionen Adressen, aus einem selbstgebauten Index
+  statt aus dem üblichen Geocoder, der für diese Hardware zu groß ist.
 - **[sami-portfolio](https://github.com/sami-djouhri/sami-portfolio):** die
   Codebasis hinter djouhri.de (Next.js, gehärteter Container, selbst gehostet).
 

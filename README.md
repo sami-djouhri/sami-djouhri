@@ -57,7 +57,7 @@ seit 2024 durchgehend in Betrieb.
 - **[brain-bus](https://github.com/sami-djouhri/brain-bus):** Ops-Automation, die
   MQTT-Events zu Meldungen verarbeitet. Alles, was etwas verändern würde, braucht
   vorher eine Bestätigung.
-- **[minecraft-arbiter](https://github.com/sami-djouhri/minecraft-arbiter):** der
+- **[role-arbiter](https://github.com/sami-djouhri/role-arbiter):** der
   Regler von oben, ausgeschrieben.
 - **[wake-gateway](https://github.com/sami-djouhri/wake-gateway):** Dienste, die
   beim ersten Aufruf starten und danach wieder einschlafen. Mit der Falle, die

@@ -25,13 +25,13 @@ Portfolio, Lebenslauf und Kontakt: **[djouhri.de](https://djouhri.de)**
 Ein Verbund aus mehreren Einplatinenrechnern und einem x86-Virtualisierungscluster,
 seit 2024 durchgehend in Betrieb.
 
-- **Linux und Docker.** Rund 165 containerisierte Dienste auf einem gemeinsamen
+- **Linux und Docker.** Über 160 containerisierte Dienste auf einem gemeinsamen
   gehärteten Fundament: non-root, read-only Root-Dateisystem, kleine
   Angriffsfläche.
 - **Virtualisierung.** Drei Proxmox-Knoten tragen die schweren Lasten, für die
   die kleinen Rechner zu klein geworden sind. Dazu ein Windows-Server- und
   Active-Directory-Lab in eigenen VMs.
-- **Netzwerk und Sicherheit.** Getrennte Netzzonen, kein offener Port nach außen,
+- **Netzwerk und Sicherheit.** Getrennte Netzzonen, am Heimanschluss kein offener Port,
   Zugang über Reverse-Proxy und VPN. Eine zentrale Überwachung meldet
   TLS-Zertifikate, bevor sie ablaufen.
 - **Ressourcen-Planung.** Einer der Knoten ist knapp bei Speicher. Ein eigener

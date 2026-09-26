@@ -51,6 +51,11 @@ seit 2024 durchgehend in Betrieb.
 
 - **[service-template](https://github.com/sami-djouhri/service-template):** das
   gehärtete Python-Fundament, aus dem bei mir dutzende Dienste entstanden sind.
+- **[saganta-suite](https://github.com/sami-djouhri/saganta-suite):** sechs
+  eigene Dienste als eine Plattform hinter einem Eingang. Der Prüfer davor
+  findet sechs Fehlerbilder, die ein gültiges `docker compose config`
+  durchgehen lässt, etwa einen Vhost, der auf einen Dienst zeigt, den es in
+  diesem Stapel nicht gibt.
 - **[trivy-scanner](https://github.com/sami-djouhri/trivy-scanner):**
   CVE-Scanning einer ganzen Container-Flotte auf einem Rechner, der dafür
   eigentlich zu wenig RAM hat. Ergebnis geht als Prometheus-Metrik raus.

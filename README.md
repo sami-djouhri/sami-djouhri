@@ -56,6 +56,9 @@ seit 2024 durchgehend in Betrieb.
   findet sechs Fehlerbilder, die ein gültiges `docker compose config`
   durchgehen lässt, etwa einen Vhost, der auf einen Dienst zeigt, den es in
   diesem Stapel nicht gibt.
+- **[saganta](https://github.com/sami-djouhri/saganta):** die Oberfläche
+  dazu: eine Shell und acht Apps in SvelteKit hinter einer gemeinsamen Anmeldung, mit
+  FastAPI-Backends und Postgres dahinter.
 - **[trivy-scanner](https://github.com/sami-djouhri/trivy-scanner):**
   CVE-Scanning einer ganzen Container-Flotte auf einem Rechner, der dafür
   eigentlich zu wenig RAM hat. Ergebnis geht als Prometheus-Metrik raus.
@@ -71,7 +74,9 @@ seit 2024 durchgehend in Betrieb.
   Adress-Suche über rund 20 Millionen Adressen, aus einem selbstgebauten Index
   statt aus dem üblichen Geocoder, der für diese Hardware zu groß ist.
 - **[sami-portfolio](https://github.com/sami-djouhri/sami-portfolio):** die
-  Codebasis hinter djouhri.de (Next.js, gehärteter Container, selbst gehostet).
+  Codebasis hinter djouhri.de. Next.js, als fertige Dateien gebaut und von Caddy
+  ausgeliefert. Hinter einem Seitenaufruf läuft kein Node-Prozess, nur das
+  Kontaktformular hat einen kleinen Dienst.
 
 ### Werkzeugkasten
 

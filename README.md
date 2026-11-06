@@ -70,9 +70,6 @@ seit 2024 durchgehend in Betrieb.
 - **[wake-gateway](https://github.com/sami-djouhri/wake-gateway):** Dienste, die
   beim ersten Aufruf starten und danach wieder einschlafen. Mit der Falle, die
   das kostet: eine Verfügbarkeits-Prüfung, die den Dienst aufruft, hält ihn wach.
-- **[karten](https://github.com/sami-djouhri/karten):** Offline-Kartenportal mit
-  Adress-Suche über rund 20 Millionen Adressen, aus einem selbstgebauten Index
-  statt aus dem üblichen Geocoder, der für diese Hardware zu groß ist.
 - **[sami-portfolio](https://github.com/sami-djouhri/sami-portfolio):** die
   Codebasis hinter djouhri.de. Next.js, als fertige Dateien gebaut und von Caddy
   ausgeliefert. Hinter einem Seitenaufruf läuft kein Node-Prozess, nur das

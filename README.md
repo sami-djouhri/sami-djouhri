@@ -65,6 +65,10 @@ seit 2024 durchgehend in Betrieb.
 - **[brain-bus](https://github.com/sami-djouhri/brain-bus):** Ops-Automation, die
   MQTT-Events zu Meldungen verarbeitet. Alles, was etwas verändern würde, braucht
   vorher eine Bestätigung.
+- **[tardis-android](https://github.com/sami-djouhri/tardis-android):** eine
+  native Android-App, mit der ich das Homelab vom Handy aus betreibe: Zustand
+  der Wirte und Dienste, Alarme, Freigaben. Sie spricht nur über einen eigenen
+  Dienst mit Client-Zertifikat, nie direkt mit den Rechnern.
 - **[role-arbiter](https://github.com/sami-djouhri/role-arbiter):** der
   Regler von oben, ausgeschrieben.
 - **[wake-gateway](https://github.com/sami-djouhri/wake-gateway):** Dienste, die
